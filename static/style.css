@@ -1,0 +1,352 @@
+body {
+    background-color: rgb(255, 240, 248);
+}
+
+.page {
+    position: fixed;
+    inset: 0;
+    transition: 1s;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.first{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.first button {
+    border: 0;
+    border-radius: 4rem;
+    height: 15rem;
+    width: 30rem;
+    box-shadow: 0 0 3rem rgba(121, 14, 100, 0.537);
+    font-size: 2.1rem;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 500;
+    color: white;
+    transition: 1s;
+    background-color: rgb(195, 132, 166);
+}
+
+.first button:hover {
+    width: 40rem;
+    height: 20rem;
+    font-size: 2.8rem;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 500;
+    box-shadow: 0 0 7rem rgba(121, 14, 100, 0.3);
+}
+
+.start {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.start p {
+    font-size: 4rem;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 500;
+    color: rgb(148, 21, 137);
+    margin: 5rem 0 1.5rem 0;
+}
+
+.timeline {
+    height: 0.3rem;
+    width: 70%;
+    border-radius: 1rem;
+    background-color: rgb(148, 21, 137);
+    margin-bottom: auto;
+    position: relative;
+}
+
+.start h1 {
+    margin: 0;
+    font-size: 5rem;
+    color: rgb(148, 21, 137);
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+.second {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.second div {
+    display: flex;
+    flex-direction: row;
+}
+
+.second div input {
+    width: 30vw;
+    height: 3.5rem;
+    border-radius: 0.5rem;
+    border: 3px solid rgb(119, 119, 119);
+    font-size: 1.5rem;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 500;
+}
+
+.second span {
+    font-size: 1.5rem;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.second div button {
+    transition: 1s;
+    font-size: 1.5rem;
+    width: 9rem;
+    height: 3.5rem;
+    text-align: center;
+    border: 0;
+    border-radius: 0.5rem;
+    background-color: rgb(195, 132, 166);
+    color: white;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 500;
+    margin-left: 1rem;
+    box-shadow: 0 0 1rem rgba(113, 19, 113, 0.564);
+}
+
+.second div button:hover {
+    height: 4rem;
+    width: 10rem;
+    font-size: 1.7rem;
+}
+
+.second_next {
+    transition: 1s;
+    font-size: 1.7rem;
+    width: 11rem;
+    height: 5rem;
+    text-align: center;
+    border: 0;
+    border-radius: 1rem;
+    background-color: rgb(195, 132, 166);
+    color: white;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 500;
+    margin-top: 5rem;
+    box-shadow: 0 0 1rem rgba(113, 19, 113, 0.564);
+}
+
+.second_next:hover {
+    width: 13rem;
+    height: 6rem;
+    font-size: 1.9rem;
+}
+.second p {
+    position: absolute;
+    margin: 0 0 0 0;
+    font-size: 2rem;
+    color: rgb(148, 21, 137);
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 500;
+}
+
+.event_div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    top: -0.35rem;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.event_div p {
+    margin: 0;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    padding: 2.5rem;
+    height: auto;
+    width: 25rem;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 500;
+    background-color: rgb(238, 201, 221);
+    border-radius: 2rem;
+    box-shadow: 0 0 3rem    rgba(241, 199, 255, 0.83);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.event {
+    background-color: rgb(255, 240, 248);
+    height: 0.7em;
+    width: 0.7rem;
+    border: 0.3rem solid rgb(148, 21, 137);
+    border-radius: 1rem;
+    transition: 0.5s;
+    margin: auto auto 0 auto;
+    margin-bottom: 3rem;
+    pointer-events: auto;
+}
+.event:hover {
+    height: 0.9rem;
+    width: 0.9rem;
+}
+
+.event_div:not(.secret) .event:hover + p{
+    opacity: 1;
+    visibility: visible;
+}
+
+p span {
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.secret .event{
+    border: 0.3rem solid rgb(197, 155, 193);
+}
+
+.secret p {
+    opacity: 0;
+}
+
+.start_next {
+    position: absolute;
+    left: auto;
+    right: auto;
+    top: 30rem;
+    transition: 1s;
+    font-size: 1.7rem;
+    width: 11rem;
+    height: 5rem;
+    text-align: center;
+    border: 0;
+    border-radius: 1rem;
+    background-color: rgb(195, 132, 166);
+    color: white;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 500;
+    margin-top: 5rem;
+    box-shadow: 0 0 1rem rgba(113, 19, 113, 0.564);
+}
+
+.start_next:hover {
+    width: 13rem;
+    height: 6rem;
+    font-size: 1.9rem;
+}
+
+#page_9 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#page_9 p:not(.img_p) {
+    margin: 0;
+    font-size: 5rem;
+    color: rgb(148, 21, 137);
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+#page_9 div:not(.img_div){
+    height: 45rem;
+    background-color: rgb(247, 202, 226);
+    border-radius: 5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.img_div {
+    margin: 4rem;
+    border-radius: 2rem;
+    padding: 2rem 2rem 4rem 2rem;
+    background-color: rgb(225, 163, 197);
+}
+
+.img_div img {
+    height: 100%;
+    border-radius: 2rem;
+}
+
+.img_p {
+    width: 100%;
+    margin: 0;
+    font-size: 1.9rem;
+    color: rgb(255, 255, 255);
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 500;
+    text-align: center;
+}
+
+.finish_next {
+    transition: 1s;
+    font-size: 1.7rem;
+    width: 20rem;
+    height: 5rem;
+    text-align: center;
+    border: 0;
+    border-radius: 1rem;
+    background-color: rgb(195, 132, 166);
+    color: white;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 500;
+    margin-top: 5rem;
+    box-shadow: 0 0 1rem rgba(113, 19, 113, 0.564);
+}
+
+.finish_next:hover {
+    width: 24rem;
+    height: 6rem;
+    font-size: 1.9rem;
+}
+
+#page_10 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#page_10 h1 {
+    margin: 0;
+    font-size: 4rem;
+    color: rgb(148, 21, 137);
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+#page_10 p {
+    margin: 0;
+    font-size: 2.2rem;
+    color: rgb(255, 255, 255);
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 500;
+    text-align: center;
+    column-count: 2;        /* 2 колонки */
+    column-gap: 2rem;
+    border-radius: 3rem;
+    padding: 2rem;
+    height: auto;   
+    background-color: rgb(225, 163, 197);
+}
+
+.event_div p img {
+    margin-top: 2rem;
+    width: 100%;
+    border-radius: 1rem;
+    opacity: 0.6;
+}
